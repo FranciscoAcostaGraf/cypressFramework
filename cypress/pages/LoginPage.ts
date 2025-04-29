@@ -1,21 +1,27 @@
+import { loginLocators } from "../support/locators/loginLocators";
 export class LoginPage {
   visit() {
     cy.visit("/login");
   }
 
   enterUsername(username: string) {
-    cy.get("#username").type(username);
+    cy.get(loginLocators.usernameInput).type(username);
   }
 
   enterPassword(password: string) {
-    cy.get("#password").type(password);
+    cy.get(loginLocators.passwordInput).type(password);
   }
 
   clickLogin() {
-    cy.get("button[type='submit']").click();
+    cy.get(loginLocators.loginButton).click();
+  }
+  validate(message: string){
+    cy.get(loginLocators.flashMessage).should("be.visible").and("contain.text", message);
   }
 
   clickLogout(){
-    cy.get('.button').click();
+    cy.get(loginLocators.logoutButton).click();
   }
+  
+
 }

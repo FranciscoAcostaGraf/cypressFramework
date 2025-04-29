@@ -21,6 +21,7 @@ describe("Login Test", () => {
     loginPage.clickLogin();
     loginPage.validate(loginLocators.invalidUsername);
   })
+  
   it("should fail log in, correct username, incorrect pasword",() => {
     loginPage.visit();
     loginPage.enterUsername("tomsmith");

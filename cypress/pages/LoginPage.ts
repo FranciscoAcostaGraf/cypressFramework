@@ -1,5 +1,6 @@
 import { loginLocators } from "../support/locators/loginLocators";
 export class LoginPage {
+  
   visit() {
     cy.visit("/login");
   }
@@ -15,6 +16,7 @@ export class LoginPage {
   clickLogin() {
     cy.get(loginLocators.loginButton).click();
   }
+
   validate(message: string){
     cy.get(loginLocators.flashMessage).should("be.visible").and("contain.text", message);
   }
@@ -23,5 +25,4 @@ export class LoginPage {
     cy.get(loginLocators.logoutButton).click();
   }
   
-
 }

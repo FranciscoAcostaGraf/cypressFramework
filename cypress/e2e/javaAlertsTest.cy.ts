@@ -10,4 +10,5 @@ describe("Alerts Test", () => {
     alertsPage.jsAlertConf();
     alertsPage.jsAlertPrompt();
   });
+  
 });

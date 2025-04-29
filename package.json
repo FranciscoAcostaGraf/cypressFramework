@@ -1,0 +1,17 @@
+{
+  "name": "cypress-qa-framework",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^12.17.4",
+    "typescript": "^5.8.3"
+  },
+  "description": "Este proyecto es un punto de partida para una arquitectura de automatización con Cypress + TypeScript + Page Object Model (POM).",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
